@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar-principal">
+        <div class="navbar-logo">
+            <img src="../img/logo.png" alt="Logo" class="logo-navbar">
+            La <span>Única</span>
+        </div>
+        <ul class="navbar-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="pedido.html">Pedido</a></li>
+            <li><a href="reservas.html">Reservas</a></li>
+        </ul>
+    </nav>
+
+    <h1 class="titulo-menu">Nuestro Menú</h1>
+
+    <div class="contenedor-pedido">
+
+        <!-- MENÚ -->
+        <section id="menu">
+
+            <!-- CATEGORÍA: BROSTER -->
+            <h2>Broster</h2>
+            <div class="grid-productos">
+
+                <div class="card-producto">
+                    <img src="../img/Broster/pecho.png" alt="Pecho">
+                    <h3>Pecho</h3>
+                    <p>S/ 12.50</p>
+                    <button class="btn-agregar" data-nombre="Pecho" data-precio="12.50">Agregar</button>
+                </div>
+
+                <div class="card-producto">
+                    <img src="../img/Broster/pierna.png" alt="Pierna">
+                    <h3>Pierna</h3>
+                    <p>S/ 11.00</p>
+                    <button class="btn-agregar" data-nombre="Pierna" data-precio="11.00">Agregar</button>
+                </div>
+
+                <div class="card-producto">
+                    <img src="../img/Broster/ala.png" alt="Ala">
+                    <h3>Ala</h3>
+                    <p>S/ 10.00</p>
+                    <button class="btn-agregar" data-nombre="Ala" data-precio="10.00">Agregar</button>
+                </div>
+                
+                <div class="card-producto">
+                    <img src="../img/Broster/encuentro.png" alt="Encuentro">
+                    <h3>Encuentro</h3>
+                    <p>S/ 11.50</p>
+                    <button class="btn-agregar" data-nombre="Encuentro" data-precio="11.50">Agregar</button>
+                </div>
+
+            </div>
+            
+            <!-- CATEGORÍA: ALITAS -->
+            <h2>Alitas</h2>
+            <div class="grid-productos">
+
+                <div class="card-producto">
+                    <img src="../img/Alitas/bbq.png" alt="BBQ">
+                    <h3>BBQ</h3>
+                    <p>S/ 14.50</p>
+                    <button class="btn-agregar" data-nombre="BBQ" data-precio="14.50">Agregar</button>
+                </div>
+
+                <div class="card-producto">
+                    <img src="../img/Alitas/acevichadas.png" alt="Acevichadas">
+                    <h3>Acevichadas</h3>
+                    <p>S/ 14.00</p>
+                    <button class="btn-agregar" data-nombre="Acevichadas" data-precio="11.00">Agregar</button>
+                </div>
+                
+                <div class="card-producto">
+                    <img src="../img/Alitas/buffalo.png" alt="Buffalo">
+                    <h3>Buffalo</h3>
+                    <p>S/ 15.00</p>
+                    <button class="btn-agregar" data-nombre="Buffalo" data-precio="15.00">Agregar</button>
+                </div>
+                
+                <div class="card-producto">
+                    <img src="../img/Alitas/orientales.png" alt="Orientales">
+                    <h3>Orientales</h3>
+                    <p>S/ 13.00</p>
+                    <button class="btn-agregar" data-nombre="Orientales" data-precio="13.00">Agregar</button>
+                </div>
+                
+            </div>
+            
+            <!-- 👆 CIERRE del grid-productos de ALITAS -->
+            
+            <!-- CATEGORÍA: HAMBURGUESAS -->
+            <h2>Hamburguesas</h2>
+            <div class="grid-productos">
+                
+                <div class="card-producto">
+                    <img src="../img/Hamburguesas/Broster.png" alt="Broster">
+                    <h3>Broster</h3>
+                    <p>S/ 8.50</p>
+                    <button class="btn-agregar" data-nombre="Broster" data-precio="8.50">Agregar</button>
+                </div>
+                
+                <div class="card-producto">
+                    <img src="../img/Hamburguesas/royal.png" alt="Royal">
+                    <h3>Royal</h3>
+                    <p>S/ 8.00</p>
+                    <button class="btn-agregar" data-nombre="Royal" data-precio="8.00">Agregar</button>
+                </div>
+                
+                <div class="card-producto">
+                    <img src="../img/Hamburguesas/LaUnica.png" alt="LaUnica">
+                    <h3>LaUnica</h3>
+                    <p>S/ 8.50</p>
+                    <button class="btn-agregar" data-nombre="LaUnica" data-precio="8.50">Agregar</button>
+                </div>
+                
+                <div class="card-producto">
+                    <img src="../img/Hamburguesas/clasica.png" alt="Clasica">
+                    <h3>Clasica</h3>
+                    <p>S/ 5.00</p>
+                    <button class="btn-agregar" data-nombre="Clasica" data-precio="5.00">Agregar</button>
+                </div>
+
+            </div>
+
+            <!-- CATEGORÍA: BEBIDAS -->
+            <h2>Bebidas</h2>
+            <div class="grid-productos">
+
+                <div class="card-producto">
+                    <img src="../img/Bebidas/inka-cola-3L.png" alt="Inka cola 3L">
+                    <h3>Inka cola 3L</h3>
+                    <p>S/ 12.50</p>
+                    <button class="btn-agregar" data-nombre="Inka cola 3L" data-precio="12.50">Agregar</button>
+                </div>
+                
+                <div class="card-producto">
+                    <img src="../img/Bebidas/chicha-morada-1l.png" alt="Chicha morada 1L">
+                    <h3>Chicha morada 1L</h3>
+                    <p>S/ 7.00</p>
+                    <button class="btn-agregar" data-nombre="Chicha morada 1L" data-precio="7.00">Agregar</button>
+                </div>
+
+                <div class="card-producto">
+                    <img src="../img/Bebidas/coca-cola-1.5L.png" alt="Coca cola 1.5L">
+                    <h3>Coca cola 1.5L</h3>
+                    <p>S/ 7.00</p>
+                    <button class="btn-agregar" data-nombre="Coca cola 1.5L" data-precio="7.00">Agregar</button>
+                </div>
+                
+                <div class="card-producto">
+                    <img src="../img/Bebidas/inka-cola-1.5L.png" alt="Inka cola 1.5L">
+                    <h3>Inka cola 1.5L</h3>
+                    <p>S/ 7.00</p>
+                    <button class="btn-agregar" data-nombre="Inka cola 1.5L" data-precio="7.00">Agregar</button>
+                </div>
+                
+                <div class="card-producto">
+                    <img src="../img/Bebidas/inka-cola-600ml.png" alt="Inka cola 600ml">
+                    <h3>Inka cola 600ml</h3>
+                    <p>S/ 3.50</p>
+                    <button class="btn-agregar" data-nombre="Inka cola 600ml" data-precio="3.50">Agregar</button>
+                </div>
+                <div class="card-producto">
+                    <img src="../img/Bebidas/coca-cola-600ml.png" alt="Coca cola 600ml">
+                    <h3>Coca cola 600ml</h3>
+                    <p>S/ 3.50</p>
+                    <button class="btn-agregar" data-nombre="Coca cola 600ml" data-precio="3.50">Agregar</button>
+                </div>
+                
+                <div class="card-producto">
+                    <img src="../img/Bebidas/san-luis-625ml.png" alt="San luis 625ml">
+                    <h3>San luis 625 ml</h3>
+                    <p>S/ 2.50</p>
+                    <button class="btn-agregar" data-nombre="San luis 625ml" data-precio="2.50">Agregar</button>
+                </div>
+                
+                <div class="card-producto">
+                    <img src="../img/Bebidas/loa-625ml.png" alt="Loa 625ml">
+                    <h3>Loa 625ml</h3>
+                    <p>S/ 1.50</p>
+                    <button class="btn-agregar" data-nombre="Loa 625ml" data-precio="1.50">Agregar</button>
+                </div>
+                
+                <div class="card-producto">
+                    <img src="../img/Bebidas/pepsi-355ml.png" alt="Pepsi 355ml">
+                    <h3>Pepsi 355ml</h3>
+                    <p>S/ 1.50</p>
+                    <button class="btn-agregar" data-nombre="Pepsi 355ml" data-precio="1.50">Agregar</button>
+                </div>
+                
+            </div>
+            <!-- 👆 CIERRE del grid-productos de Bebidas -->
+
+        </section>
+
+        <!-- CARRITO -->
+        <aside id="carrito">
+            <h2><i class="fa-solid fa-cart-shopping"></i> Tu Pedido</h2>
+            <table id="tabla-carrito">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Cant.</th>
+                        <th>Precio</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="cuerpo-carrito">
+                    <!-- JS inserta las filas aquí -->
+                </tbody>
+            </table>
+            <div class="entrega-opciones">
+                <h3>¿Cómo quieres tu pedido?</h3>
+                <div class="toggle-entrega">
+                    <button type="button" id="btn-recojo" class="btn-entrega" onclick="seleccionarEntrega('recojo')">Recojo en tienda</button>
+                    <button type="button" id="btn-delivery" class="btn-entrega" onclick="seleccionarEntrega('delivery')">Delivery</button>
+                </div>
+
+                <div id="mensaje-recojo" class="info-entrega oculto">
+                    ✅ Tu pedido estará listo dentro de <strong>15 minutos</strong>.
+                </div>
+
+                <div id="campo-delivery" class="info-entrega oculto">
+                    <div class="campo-direccion">
+                        <input type="text" id="direccion-entrega" placeholder="Escribe tu dirección de entrega">
+                        <button type="button" id="btn-gps" onclick="obtenerUbicacion()" title="Usar mi ubicación">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </button>
+                    </div>
+                    <p id="estado-gps" class="estado-gps"></p>
+                </div>
+            </div>
+            <p class="total">Total: S/ <span id="total-pedido">0.00</span></p>
+            <button id="btn-confirmar">Confirmar Pedido</button>
+        </aside>
+
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

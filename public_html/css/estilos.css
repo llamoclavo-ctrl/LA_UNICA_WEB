@@ -1,0 +1,674 @@
+/* =========================================================
+   1. RESET Y BASE
+   ========================================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  background-color: #fafafa;
+  color: #222;
+  padding-top: 130px;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* =========================================================
+   2. NAVBAR FIJO
+   ========================================================= */
+.navbar-principal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1a1a1a;
+  padding: 0 20px;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.navbar-logo span {
+  color: #b30000;
+}
+
+.logo-navbar {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 18px;
+}
+
+.navbar-links a {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  transition: color 0.2s;
+}
+
+.navbar-links a:hover {
+  color: #b30000;
+}
+
+/* =========================================================
+   3. HEADER (INICIO Y RESERVAS)
+   ========================================================= */
+.header-inicio {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  z-index: 900;
+  text-align: center;
+  background-color: #b30000;
+  color: #fff;
+  padding: 6px 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.header-inicio h1 {
+  font-size: 1.5rem;
+  margin-bottom: 4px;
+}
+
+.header-inicio p {
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* =========================================================
+   4. PÁGINA DE INICIO
+   ========================================================= */
+.contenedor-inicio {
+  max-width: 800px;
+  margin: 40px auto;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.imagen-inicio {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto 20px;
+}
+
+.imagen-inicio img {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+}
+
+.logo-flotante {
+  position: fixed;
+  top: 75px;
+  left: 15px;
+  width: 160px;
+  z-index: 2000;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.logo-flotante img {
+  width: 100%;
+  display: block;
+  border-radius: 0%;
+  animation: salto-zoom-entrada 2.6s ease-out,
+             salto-zoom-continuo 5s infinite ease-in-out 0.6s;
+}
+
+.logo-flotante:hover {
+  transform: translateX(15px);
+}
+
+@keyframes salto-zoom-entrada {
+  0%   { transform: translateY(-80px) scale(0.5);  opacity: 0; }
+  30%  { transform: translateY(-30px) scale(0.85); opacity: 0.7; }
+  60%  { transform: translateY(0)     scale(1.05); opacity: 1; }
+  75%  { transform: translateY(-8px)  scale(1.02); }
+  90%  { transform: translateY(0)     scale(1); }
+  100% { transform: translateY(0)     scale(1); }
+}
+
+@keyframes salto-zoom-continuo {
+  0%   { transform: translateY(0)     scale(1); }
+  50%  { transform: translateY(-10px) scale(1.20); }
+  100% { transform: translateY(0)     scale(1); }
+}
+
+.descripcion {
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+
+.botones-inicio {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-pedir {
+  display: inline-block;
+  background-color: #b30000;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 24px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.btn-pedir:hover {
+  background-color: #8a0000;
+  transform: translateY(-2px);
+}
+
+.info-rapida {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.info-rapida p {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+}
+
+.info-rapida i {
+  color: #b30000;
+}
+
+/* =========================================================
+   5. PÁGINA DE PEDIDOS (MENÚ + CARRITO)
+   ========================================================= */
+.titulo-menu {
+  color: #000;
+  margin: 15px 20px 0;
+  font-size: 1.4rem;
+}
+
+.contenedor-pedido {
+  display: flex;
+  gap: 18px;
+  padding: 18px;
+}
+
+#menu {
+  flex: 7;
+}
+
+#carrito {
+  flex: 3;
+  position: sticky;
+  top: 75px;
+  align-self: flex-start;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  padding: 14px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.grid-productos {
+  display: grid;
+  grid-template-columns: 
+      repeat(auto-fill, minmax(170px, 1fr));
+  gap: 18px;
+}
+
+#menu h2,
+#carrito h2 {
+  margin-bottom: 12px;
+  color: #b30000;
+  font-size: 1.2rem;
+}
+
+#menu h2 {
+  margin-top: 25px;
+}
+
+#menu h2:first-of-type {
+  margin-top: 0;
+}
+
+#carrito h2 i {
+  margin-right: 6px;
+  color: #b30000;
+}
+
+/* --- Tarjetas de producto --- */
+.card-producto {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-producto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .45);
+}
+
+.card-producto img {
+  width: 100%;
+  height: 130px;
+  object-fit: contain;
+  object-position: center;
+  background: #fff;
+  border-radius: 12px;
+  display: block;
+  margin-bottom: 8px;
+  padding: 0.1px;
+}
+
+.card-producto h3 {
+  font-size: 0.9rem;
+  margin-bottom: 4px;
+}
+
+.card-producto p {
+  font-size: 0.95rem;
+  font-weight: bold;
+  color: #b30000;
+  margin-bottom: 8px;
+}
+
+.btn-agregar {
+  background-color: #b30000;
+  color: #fff;
+  border: none;
+  padding: 7px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.8rem;
+  transition: background-color 0.3s;
+}
+
+.btn-agregar:hover {
+  background-color: #8a0000;
+}
+
+/* --- Tabla del carrito --- */
+#tabla-carrito {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+#tabla-carrito th,
+#tabla-carrito td {
+  padding: 7px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.total {
+  margin-top: 12px;
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: right;
+}
+
+#btn-confirmar {
+  width: 100%;
+  margin-top: 10px;
+  background-color: #222;
+  color: #fff;
+  border: none;
+  padding: 9px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.85rem;
+  transition: background-color 0.2s;
+}
+
+#btn-confirmar:hover {
+  background-color: #444;
+}
+
+.btn-eliminar {
+  background: none;
+  border: none;
+  color: #b30000;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* --- Control de cantidad --- */
+.input-cantidad {
+  width: 45px;
+  padding: 3px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.input-cantidad::-webkit-inner-spin-button,
+.input-cantidad::-webkit-outer-spin-button {
+  opacity: 1;
+}
+
+/* --- Opciones de entrega --- */
+.entrega-opciones {
+  margin-top: 18px;
+  margin-bottom: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #ddd;
+}
+
+.entrega-opciones h3 {
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.toggle-entrega {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.btn-entrega {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  background: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.8rem;
+  transition: all 0.2s;
+}
+
+.btn-entrega.activo {
+  background-color: #1a1a1a;
+  color: white;
+  border-color: #1a1a1a;
+}
+
+.info-entrega {
+  background: #f0f0f0;
+  padding: 9px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.info-entrega.oculto {
+  display: none;
+}
+
+.campo-direccion {
+  display: flex;
+  gap: 6px;
+}
+
+.campo-direccion input {
+  flex: 1;
+  padding: 7px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.8rem;
+}
+
+#btn-gps {
+  background-color: #b30000;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 0 6px;
+  height: 27px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+#btn-gps:hover {
+  transform: scale(1.15);
+  background-color: #8a0000;
+}
+
+.estado-gps {
+  margin-top: 5px;
+  font-size: 0.75rem;
+  color: #555;
+}
+
+/* =========================================================
+   6. PÁGINA DE RESERVAS (FORMULARIO)
+   ========================================================= */
+.contenedor-reserva {
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.form-reserva {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  width: 100%;
+  max-width: 460px;
+  margin: 0 auto;
+}
+
+.campo-reserva {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 10px 12px;
+  gap: 10px;
+  background: #fff;
+  transition: border-color 0.2s;
+}
+
+.campo-reserva:focus-within {
+  border-color: #b30000;
+}
+
+.icono-campo {
+  color: #888;
+  font-size: 1rem;
+  padding-right: 10px;
+  border-right: 1px solid #ddd;
+  width: 30px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.campo-reserva input,
+.campo-reserva select,
+.campo-reserva textarea {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 0.9rem;
+  font-family: inherit;
+  color: #333;
+  background: transparent;
+  min-width: 0;
+}
+
+.campo-mensaje {
+  align-items: flex-start;
+  grid-column: 1 / -1;
+}
+
+.campo-mensaje .icono-campo {
+  margin-top: 4px;
+}
+
+.campo-mensaje textarea {
+  resize: vertical;
+}
+
+.btn-EnviarReserva {
+  grid-column: 1 / -1;
+  justify-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 24px;
+  background: #b30000;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-EnviarReserva:hover {
+  background: #8a0000;
+  transform: translateY(-2px);
+}
+
+.btn-EnviarReserva:active {
+  transform: translateY(0);
+}
+
+.btn-EnviarReserva i {
+  font-size: 1rem;
+}
+
+/* =========================================================
+   7. FOOTER
+   ========================================================= */
+.footer-inicio {
+  text-align: center;
+  padding: 12px;
+  background-color: #222;
+  color: #fff;
+  font-size: 0.8rem;
+  margin-top: 30px;
+}
+
+/* =========================================================
+   8. RESPONSIVE
+   ========================================================= */
+@media (max-width: 768px) {
+  .contenedor-pedido {
+    flex-direction: column;
+  }
+
+  #carrito {
+    position: static;
+    max-height: none;
+  }
+
+  .header-inicio {
+    padding: 20px 15px;
+  }
+
+  .header-inicio h1 {
+    font-size: 1.3rem;
+  }
+
+  .contenedor-reserva {
+    padding: 25px 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar-principal {
+    flex-direction: column;
+    height: auto;
+    gap: 8px;
+    padding: 10px 15px;
+  }
+
+  body {
+    padding-top: 90px;
+  }
+
+  .navbar-logo {
+    font-size: 1.3rem;
+  }
+
+  .titulo-menu {
+    margin: 12px 15px 0;
+    font-size: 1.2rem;
+  }
+
+  .botones-inicio {
+    flex-direction: column;
+  }
+
+  .btn-pedir {
+    width: 100%;
+    text-align: center;
+  }
+
+  .logo-flotante {
+    width: 65px;
+    top: 100px;
+    left: 8px;
+  }
+}
+
+@media (max-width: 500px) {
+  .info-rapida {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+
+
+
+h1, h2, h3, button, .btn-pedir, .btn-agregar, .btn-EnviarReserva {
+  font-family: 'Poppins', Arial, sans-serif;
+}

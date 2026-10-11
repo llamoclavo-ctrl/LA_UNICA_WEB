@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar-principal">
+        <div class="navbar-logo">
+            <img src="../img/logo.png" alt="Logo" class="logo-navbar">
+        La <span>Única</span> 
+        </div>
+        <ul class="navbar-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="pedido.html">Pedido</a></li>
+            <li><a href="reservas.html">Reservas</a></li>
+        </ul>
+    </nav>
+
+    <header class="header-inicio">
+    <p>Reserve una mesa en línea</p>
+    </header>
+    
+    <main class="contenedor-reserva">
+    <form class="form-reserva" id="form-reserva">
+
+        <div class="campo-reserva">
+            <i class="fa-solid fa-calendar-days icono-campo"></i>
+            <input type="date" id="fecha" name="fecha" required>
+        </div>
+
+        <div class="campo-reserva">
+            <i class="fa-solid fa-clock icono-campo"></i>
+            <input type="time" id="hora" name="hora" required>
+        </div>
+
+        <div class="campo-reserva">
+            <i class="fa-solid fa-user icono-campo"></i>
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+        </div>
+
+        <div class="campo-reserva">
+            <i class="fa-solid fa-mobile-screen icono-campo"></i>
+            <input type="tel" id="celular" name="celular" placeholder="Celular" required>
+        </div>
+
+        <div class="campo-reserva">
+            <i class="fa-solid fa-users icono-campo"></i>
+            <select id="personas" name="personas" required>
+                <option value="">Cantidad de personas</option>
+                <option value="1">1 persona</option>
+                <option value="2">2 personas</option>
+                <option value="3">3 personas</option>
+                <option value="4">4 personas</option>
+                <option value="5+">5 o más</option>
+            </select>
+        </div>
+
+        <div class="campo-reserva">
+            <i class="fa-solid fa-location-dot icono-campo"></i>
+            <select id="sede" name="sede" required>
+                <option value="">Selecciona sede</option>
+                <option value="Miraflores">Restaurante Miraflores</option>
+                <option value="San Isidro">Restaurante San Isidro</option>
+                <option value="Surco">Restaurante Surco</option>
+            </select>
+        </div>
+
+        <div class="campo-reserva campo-mensaje">
+            <i class="fa-solid fa-envelope icono-campo"></i>
+            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Mensaje"></textarea>
+        </div>
+
+        <!-- 🔽 BOTÓN DE CONFIRMAR RESERVA -->
+        <button type="submit" class="btn-EnviarReserva">
+            <i class="fa-solid fa-circle-check"></i> Confirmar Reserva
+        </button>
+
+    </form>
+</main>
